@@ -3,7 +3,12 @@ package main
 import (
 	"fmt"
 	"math"
+	"net/http"
 )
+
+func indexHandler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("<h1>piska</h1>"))
+}
 
 func isPerfectSquare(n int) bool {
 	sq := int(math.Sqrt(float64(n)))
@@ -24,6 +29,13 @@ func fibonacci(n int) (int, int) {
 }
 
 func main() {
+	port := "8080"
+
+	mux := http.NewServeMux()
+
+	mux.HandleFunc("/", indexHandler)
+
+	http.ListenAndServe(":"+port, mux)
 	var num int
 	fmt.Print("Введите число: ")
 	_, err := fmt.Scan(&num)
