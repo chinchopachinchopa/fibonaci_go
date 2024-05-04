@@ -30,7 +30,8 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 			if num-prev < curr-num {
 				fmt.Fprintf(w, "Ближайшее число Фибоначчи: %d\n", prev)
 			} else {
-				fmt.Fprintf(w, "Ближайшее число Фибоначчи: %d\n", curr)
+				fmt.Fprintf(w, "Ближайшее число Фибоначчи:0 %d\n", curr)
+
 			}
 		}
 	}
