@@ -5,7 +5,7 @@ import (
 	"main/logic"
 )
 
-func Main() {
+func SMain() {
 
 	var num int
 	fmt.Print("Введите число: ")
