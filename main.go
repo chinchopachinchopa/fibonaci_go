@@ -1,9 +1,9 @@
 package main
 
 import (
-	"main/ui/web"
+	"main/ui/console"
 )
 
 func main() {
-	web.Main()
+	console.CMain()
 }

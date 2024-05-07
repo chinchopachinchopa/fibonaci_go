@@ -36,7 +36,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 }
-func Main() {
+func WMain() {
 	port := "8080"
 
 	mux := http.NewServeMux()
